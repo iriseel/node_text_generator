@@ -29,7 +29,7 @@ let progressIncrement = .015;
 //gapValue determines the distance between each point
 let gapValue = 1;
 let strokeValueThin = 1; let strokeValueThick = 4;
-let fontSize = 620;
+let fontSize = 200;
 let xOffset; let yOffset;
 let amplitude = 1; let angle = 0;
 
@@ -66,8 +66,8 @@ let frameLimit = fps * captureDuration;
 const saveButton = document.querySelector(".saveGIF");
 
 function preload() {
-    // font = loadFont("assets/fonts/MoMA-Sans-Bold.otf");
-    font = loadFont("assets/fonts/SiriEggSando-Egg.otf");
+    font = loadFont("assets/fonts/MoMA-Sans-Bold.otf");
+    // font = loadFont("assets/fonts/SiriEggSando-Egg.otf");
     // img = loadImage("/assets/imgs/ArtJones.jpg");
 }
 
@@ -93,7 +93,7 @@ function setup() {
     });
 
     // Initialize with default settings and text
-    generateTextArray("13456789");
+    generateTextArray("Lines of Belonging");
 
     // Add event listener to the text input button
     const textInput = document.querySelector(".convertText");
@@ -235,8 +235,8 @@ function setCharacterSpace(character, boundsWidth) {
         // character.width = character.width * 0.8;
     }
     else {
-        xOffset += 0; // Offset for the next character
-        // xOffset += character.width * 1.1; // Offset for the next character
+        // xOffset += 0; // Offset for the next character
+        xOffset += character.width * 1.1; // Offset for the next character
         // xOffset += boundsWidth * 1.2; // Offset for the next character
 
     }
