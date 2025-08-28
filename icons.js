@@ -272,9 +272,9 @@ function draw() {
     if (!linesDrawn) {
         // connectDotsWithinLetter();
     }
-    drawDots();
+    // drawDots();
     // drawLinesWithinLetter();
-    // drawMovingDots();
+    drawMovingDots();
 
     const randomColor = getRandomItemFromArray(colors);
     lineBetweenLetters_Color = randomColor;

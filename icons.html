@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Text Generator</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/vxg4cgg.css">
+    <link rel="stylesheet" href="style.css"> <!-- Optional: Link to a CSS file -->
+</head>
+<body>
+    <div class="menu">
+        <label>
+            <input type="checkbox" class="accumulate-lines-toggle">
+            Accumulate lines
+        </label>
+
+        <div class="slider-container amplitude-slider-container">
+            <div class="value-display">Amplitude: <span class="amplitude">1</span></div>
+
+            <input type="range" class="amplitudeSlider" min="0" max="300" step="1" value="1">
+        </div>
+
+        <div class="slider-container">
+            <div class="value-display">Sample Factor (point density): <span class="sampleFactorValue">0.1</span></div>
+
+            <input type="range" class="sampleFactorSlider" min="0.003" max=".5" step="0.001" value=".1">
+        </div>
+
+        <div class="slider-container">
+            <div class="value-display">Simplify Threshold (point simplification): <span class="simplifyThresholdValue">0</span></div>
+
+            <input type="range" class="simplifyThresholdSlider" min="0" max=".5" step="0.001" value="0">
+        </div>
+
+        <div class="slider-container">
+            <div class="value-display">Progress Increment (speed): <span class="progressIncrement">0.015</span></div>
+
+            <input type="range" class="progressIncrementSlider" min="0.01" max=".5" step="0.001" value=".015">
+        </div>
+
+        <div class="slider-container">
+            <div class="value-display">Gap Value: <span class="gapValue">1</span></div>
+
+            <input type="range" class="gapValueSlider" min="0" max="3" step="1" value="1">
+        </div>
+
+        <div class="slider-container">
+            <div class="value-display">Stroke Value Thin: <span class="strokeValueThin">4</span></div>
+
+            <input type="range" class="strokeValueThinSlider" min="0" max="100" step=".1" value="4">
+        </div>
+
+        <div class="slider-container">
+            <div class="value-display">Font Size: <span class="fontSize">620</span></div>
+
+            <input type="range" class="fontSizeSlider" min="12" max="800" step="10" value="620">
+        </div>
+
+        <div class="textInput">
+            <label for="textInput">Enter text:</label>
+            <input type="text" id="textInput" placeholder="Enter your text here">
+            <button class="convertText">
+                Update text
+            </button>
+        </div>
+
+        <button class="saveGIF">Save GIF</button>
+    </div>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+   <script src="https://unpkg.com/p5.gif@0.4.0/lib/p5.gif.min.js"></script>
+
+    <script src="icons.js"></script>
+
+</body>
+</html>
